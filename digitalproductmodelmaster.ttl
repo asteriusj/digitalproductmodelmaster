@@ -34,13 +34,13 @@
 pdmm:   
         a                   owl:Ontology ;
         rdfs:label          "Ontology for Digital Product Model Master"@en ;
-        rdfs:comment        "An experimental ontology for defining entity relationships and data property definitions and constraints\n" ;
+        rdfs:comment        "An experimental ontology for defining entity relationships and data property definitions and constraints in a formal semantic representation.\n" ;
         dc:date             "$Date: 2018-02-26 20:18:26 $" ;
         prov:generatedAtTime "$Date: 2018-02-26 20:18:26 $" ;
         dcterms:created     "$Date: 2018-02-26 20:18:26 $" ;
         dcterms:modified    "$Date: 2018-03-08 12:12:12 $" ;
         dc:description      "\nThe Digital Product Model Master (DPMM) RDF vocabulary, described using W3C RDF Schema and the Web Ontology Language.\n" ;
-        dc:title            "Digital Product Model Master (DPM) Ontology"@en ;
+        dc:title            "Digital Product Model Master (DPMM) Ontology"@en ;
         dc:creator          <http://github.com/asteriusj>;
         schema:contributor  <http://LinkedIn.com/jeffreyastewart/> , <http://github.com/asteriusj> ;
         dc:publisher        <http://github.com/asteriusj>;
@@ -49,7 +49,7 @@ pdmm:
               "dpmm" ;
         vann:preferredNamespaceUri
               "https://github.com/asteriusj/digitalproductmodelmaster#" ;
-        dcterms:abstract    "An experimental ontology for defining entity relationships and data property definitions and constraints\n"@en ;
+        dcterms:abstract    "An experimental ontology for defining entity relationships and data property definitions and constraints in a formal semantic representation.\n" ;
         owl:versionIRI      "https://github.com/asteriusj/digitalproductmodelmaster/Draft"@en ;
         owl:versionInfo     "Draft"@en ;
         bibo:status         "Draft"@en .
@@ -177,7 +177,7 @@ foaf:Document  a          owl:Class ;
 
 :Activty 
         a                   owl:Class ;
-        rdfs:label          "Concept"@en ;
+        rdfs:label          "Activity"@en ;
         rdfs:comment        "A "@en ;
         rdfs:subClassOf     :Concept ;
         .
@@ -321,12 +321,9 @@ foaf:Document  a          owl:Class ;
 #// People model   
 #
 
-#    { "from": "Skill maturity model", "to": "People", "text": "componentOf" },
-#    { "from": "People", "to": "Skill maturity model", "text": "hasComponent" },
-
-:artifactSkillMaturityModel 
+:artifactSkillBehaviorMatrix 
         a                   owl:Class ;
-        rdfs:label          "Skill maturity model"@en ;
+        rdfs:label          "Skill behavior matrix"@en ;
         rdfs:comment        "A "@en ;
         rdfs:subClassOf     :Artifact ;
         .
@@ -336,7 +333,7 @@ foaf:Document  a          owl:Class ;
         rdfs:label          "is a component of"@en ;
         rdfs:comment        ""@en ;
         rdfs:isDefinedBy    pdmm: ;
-        rdfs:domain         :artifactSkillMaturityModel  ;
+        rdfs:domain         :artifactSkillBehaviorMatrix  ;
         rdfs:range          :People ;
         rdfs:inverseOf      :hasComponent ;
         .
@@ -347,7 +344,7 @@ foaf:Document  a          owl:Class ;
         rdfs:comment        ""@en ;
         rdfs:isDefinedBy    pdmm: ;
         rdfs:domain         :People  ;
-        rdfs:range          :artifactSkillMaturityModel ;
+        rdfs:range          :artifactSkillBehaviorMatrix ;
         rdfs:inverseOf      :componentOf ;
         .
 
@@ -381,14 +378,10 @@ foaf:Document  a          owl:Class ;
         rdfs:range          :artifactPositionRoleResponsibility ;
         rdfs:inverseOf      :componentOf ;
         .
-        
-        
-#    { "from": "Competency behavior matrix", "to": "People", "text": "componentOf" },
-#    { "from": "People", "to": "Competency behavior matrix", "text": "hasComponent" },
 
-:artifactCompetencyBehaviorMatrix 
+:artifactCareerPathLattice 
         a                   owl:Class ;
-        rdfs:label          "Competency behavior matrix"@en ;
+        rdfs:label          "Career path lattice"@en ;
         rdfs:comment        "A "@en ;
         rdfs:subClassOf     :Artifact ;
         .
@@ -398,7 +391,7 @@ foaf:Document  a          owl:Class ;
         rdfs:label          "is a component of"@en ;
         rdfs:comment        ""@en ;
         rdfs:isDefinedBy    pdmm: ;
-        rdfs:domain         :artifactCompetencyBehaviorMatrix  ;
+        rdfs:domain         :artifactCareerPathLattice  ;
         rdfs:range          :People ;
         rdfs:inverseOf      :hasComponent ;
         .
@@ -409,7 +402,7 @@ foaf:Document  a          owl:Class ;
         rdfs:comment        ""@en ;
         rdfs:isDefinedBy    pdmm: ;
         rdfs:domain         :People  ;
-        rdfs:range          :artifactCompetencyBehaviorMatrix ;
+        rdfs:range          :artifactCareerPathLattice ;
         rdfs:inverseOf      :componentOf ;
         .
 
@@ -668,7 +661,7 @@ foaf:Document  a          owl:Class ;
         rdfs:comment        ""@en ;
         rdfs:isDefinedBy    pdmm: ;
         rdfs:domain         :artifactLogicModelIndicators  ;
-        rdfs:range          :artifactCompetencyBehaviorMatrix ;
+        rdfs:range          :artifactCareerPathLattice ;
         rdfs:inverseOf      :monitoredBy ;
         .
 
@@ -677,7 +670,7 @@ foaf:Document  a          owl:Class ;
         rdfs:label          "definedBy"@en ;
         rdfs:comment        ""@en ;
         rdfs:isDefinedBy    pdmm: ;
-        rdfs:domain         :artifactCompetencyBehaviorMatrix  ;
+        rdfs:domain         :artifactCareerPathLattice  ;
         rdfs:range          :artifactLogicModelIndicators ;
         rdfs:inverseOf      :monitors ;
         .
@@ -691,7 +684,7 @@ foaf:Document  a          owl:Class ;
         rdfs:comment        ""@en ;
         rdfs:isDefinedBy    pdmm: ;
         rdfs:domain         :artifactActionPlanChecklist  ;
-        rdfs:range          :artifactSkillMaturityModel ;
+        rdfs:range          :artifactSkillBehaviorMatrix ;
         rdfs:inverseOf      :requiredBy ;
         .
 
@@ -700,7 +693,7 @@ foaf:Document  a          owl:Class ;
         rdfs:label          "requiredBy"@en ;
         rdfs:comment        ""@en ;
         rdfs:isDefinedBy    pdmm: ;
-        rdfs:domain         :artifactSkillMaturityModel  ;
+        rdfs:domain         :artifactSkillBehaviorMatrix  ;
         rdfs:range          :artifactActionPlanChecklist ;
         rdfs:inverseOf      :requires ;
         .
@@ -811,7 +804,7 @@ foaf:Document  a          owl:Class ;
         rdfs:comment        ""@en ;
         rdfs:isDefinedBy    pdmm: ;
         rdfs:domain         :artifactTechnologyComponents  ;
-        rdfs:range          :artifactCompetencyBehaviorMatrix ;
+        rdfs:range          :artifactCareerPathLattice ;
         rdfs:inverseOf      :assistedBy ;
         .
 
@@ -820,7 +813,7 @@ foaf:Document  a          owl:Class ;
         rdfs:label          "enabledBy"@en ;
         rdfs:comment        ""@en ;
         rdfs:isDefinedBy    pdmm: ;
-        rdfs:domain         :artifactCompetencyBehaviorMatrix  ;
+        rdfs:domain         :artifactCareerPathLattice  ;
         rdfs:range          :artifactTechnologyComponents ;
         rdfs:inverseOf      :enables ;
         .
@@ -834,7 +827,7 @@ foaf:Document  a          owl:Class ;
         rdfs:comment        "Info services provide data required by individual skills for role"@en ;
         rdfs:isDefinedBy    pdmm: ;
         rdfs:domain         :artifactInformationSystemServices  ;
-        rdfs:range          :artifactSkillMaturityModel ;
+        rdfs:range          :artifactSkillBehaviorMatrix ;
         rdfs:inverseOf      :dataRequired ;
         .
 
@@ -843,7 +836,7 @@ foaf:Document  a          owl:Class ;
         rdfs:label          "requires data from"@en ;
         rdfs:comment        "Individual skills needed for role requires data from info system"@en ;
         rdfs:isDefinedBy    pdmm: ;
-        rdfs:domain         :artifactSkillMaturityModel  ;
+        rdfs:domain         :artifactSkillBehaviorMatrix  ;
         rdfs:range          :artifactInformationSystemServices ;
         rdfs:inverseOf      :dataProvided ;
         .
