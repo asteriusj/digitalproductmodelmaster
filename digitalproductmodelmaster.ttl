@@ -28,7 +28,7 @@
 @prefix vs:         <http:/s/www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix vaem:       <http://www.linkedmodel.org/schema/vaem#> .
 @prefix vann:       <http://purl.org/vocab/vann/> .
-@prefix pdmm:       <https://github.com/asteriusj/productdatamodelmaster/> .
+@prefix pdmm:       <https://github.com/asteriusj/digitalproductmodelmaster/> .
 
 
 pdmm:   
@@ -38,9 +38,8 @@ pdmm:
         dc:date             "$Date: 2018-02-26 20:18:26 $" ;
         prov:generatedAtTime "$Date: 2018-02-26 20:18:26 $" ;
         dcterms:created     "$Date: 2018-02-26 20:18:26 $" ;
-        dcterms:modified    "$Date: 2018-02-26 20:18:26 $" ;
-        dcterms:issued      "$Date: 2018-02-26 20:18:26 $" ;
-        dc:description      "\n" ;
+        dcterms:modified    "$Date: 2018-03-08 12:12:12 $" ;
+        dc:description      "\nThe Digital Product Model Master (DPMM) RDF vocabulary, described using W3C RDF Schema and the Web Ontology Language.\n" ;
         dc:title            "Digital Product Model Master (DPM) Ontology"@en ;
         dc:creator          <http://github.com/asteriusj>;
         schema:contributor  <http://LinkedIn.com/jeffreyastewart/> , <http://github.com/asteriusj> ;
@@ -49,9 +48,9 @@ pdmm:
         vann:preferredNamespacePrefix
               "dpmm" ;
         vann:preferredNamespaceUri
-              "https://github.com/asteriusj/semanticdatamaster#" ;
+              "https://github.com/asteriusj/digitalproductmodelmaster#" ;
         dcterms:abstract    "An experimental ontology for defining entity relationships and data property definitions and constraints\n"@en ;
-        owl:versionIRI      "https://github.com/asteriusj/semanticdatamaster/Draft"@en ;
+        owl:versionIRI      "https://github.com/asteriusj/digitalproductmodelmaster/Draft"@en ;
         owl:versionInfo     "Draft"@en ;
         bibo:status         "Draft"@en .
 
