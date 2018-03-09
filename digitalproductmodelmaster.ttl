@@ -35,10 +35,10 @@ pdmm:
         a                   owl:Ontology ;
         rdfs:label          "Ontology for Digital Product Model Master"@en ;
         rdfs:comment        "An experimental ontology for defining entity relationships and data property definitions and constraints in a formal semantic representation.\n" ;
-        dc:date             "$Date: 2018-02-26 20:18:26 $" ;
-        prov:generatedAtTime "$Date: 2018-02-26 20:18:26 $" ;
+        dc:date             "$Date: 2018-03-09 12:23:00 $" ;
+        prov:generatedAtTime "$Date: 2018-03-09 12:23:006 $" ;
         dcterms:created     "$Date: 2018-02-26 20:18:26 $" ;
-        dcterms:modified    "$Date: 2018-03-08 12:12:12 $" ;
+        dcterms:modified    "$Date: 2018-03-09 12:23:00 $" ;
         dc:description      "\nThe Digital Product Model Master (DPMM) RDF vocabulary, described using W3C RDF Schema and the Web Ontology Language.\n" ;
         dc:title            "Digital Product Model Master (DPMM) Ontology"@en ;
         dc:creator          <http://github.com/asteriusj>;
@@ -116,7 +116,7 @@ foaf:Document  a          owl:Class ;
 :Concept 
         a                   owl:Class ;
         rdfs:label          "Concept"@en ;
-        rdfs:comment        "An idea or"@en ;
+        rdfs:comment        "an abstract idea; a general notion. Non physical entirty"@en ;
         rdfs:subClassOf     :Thing ;
         owl:equivalentClass skos:Concept ;
         .
@@ -178,28 +178,28 @@ foaf:Document  a          owl:Class ;
 :Activty 
         a                   owl:Class ;
         rdfs:label          "Activity"@en ;
-        rdfs:comment        "A "@en ;
+        rdfs:comment        "Activities are a conceptual model of the interactions of basic business entities of Tools, Flows and Teams. "@en ;
         rdfs:subClassOf     :Concept ;
         .
 
 :Flows 
         a                   owl:Class ;
         rdfs:label          "Flows"@en ;
-        rdfs:comment        "A "@en ;
+        rdfs:comment        "A pattern of business activity and actions, data exchange and workflows"@en ;
         rdfs:subClassOf     :Activty ;
         .
         
 :Tools 
         a                   owl:Class ;
         rdfs:label          "Tools"@en ;
-        rdfs:comment        "A "@en ;
+        rdfs:comment        "A physical item or technology that is be to achieve a goal or complete an action "@en ;
         rdfs:subClassOf     :Activty ;
         .
 
 :Teams 
         a                   owl:Class ;
         rdfs:label          "Teams"@en ;
-        rdfs:comment        "A "@en ;
+        rdfs:comment        "A group of people with complementary skills required to complete a task, job, or project"@en ;
         rdfs:subClassOf     :Activty ;
         .
 
@@ -270,35 +270,35 @@ foaf:Document  a          owl:Class ;
 :Capability 
         a                   owl:Class ;
         rdfs:label          "Capability"@en ;
-        rdfs:comment        "A "@en ;
+        rdfs:comment        "Capabilities describe organizations ability to achieve a specific outcome enabled by organizational level skills embedded in people, process, and/or technology."@en ;
         rdfs:subClassOf     :Concept ;
         .
 
 :People 
         a                   owl:Class ;
         rdfs:label          "People"@en ;
-        rdfs:comment        "A "@en ;
-        rdfs:subClassOf     :Concept ;
+        rdfs:comment        "Individuals or members of a team responsibility for enabling a business capability "@en ;
+        rdfs:subClassOf     :Concept , :Person ;
         .
 
 :Process 
         a                   owl:Class ;
         rdfs:label          "Process"@en ;
-        rdfs:comment        "A "@en ;
+        rdfs:comment        "Set of actions and steps defined to enable a business capability "@en ;
         rdfs:subClassOf     :Concept ;
         .
 
 :Technology 
         a                   owl:Class ;
         rdfs:label          "Technology"@en ;
-        rdfs:comment        "A "@en ;
+        rdfs:comment        "Tools and machines used to solve real-world problems in support of a business capability "@en ;
         rdfs:subClassOf     :Concept ;
         .
 
 :partOf 
         a                   owl:ObjectProperty ;
         rdfs:label          "is part of"@en ;
-        rdfs:comment        "To"@en ;
+        rdfs:comment        "To be assocoiated with or ane element in "@en ;
         rdfs:isDefinedBy    pdmm: ;
         rdfs:domain         :People , :Process , :Technology ;
         rdfs:range          :Capability ;
@@ -309,7 +309,7 @@ foaf:Document  a          owl:Class ;
 
         a                   owl:ObjectProperty ;
         rdfs:label          "has part"@en ;
-        rdfs:comment        "To"@en ;
+        rdfs:comment        "To have an element that is associated "@en ;
         rdfs:isDefinedBy    pdmm: ;
         rdfs:domain         :Capability ;
         rdfs:range          :People , :Process , :Technology ;
@@ -348,10 +348,7 @@ foaf:Document  a          owl:Class ;
         rdfs:inverseOf      :componentOf ;
         .
 
-        
-#    { "from": "Position role responsibility", "to": "People", "text": "componentOf" },
-#    { "from": "People", "to": "Position role responsibility", "text": "hasComponent" },
-        
+      
 :artifactPositionRoleResponsibility 
         a                   owl:Class ;
         rdfs:label          "Position role responsibility"@en ;
@@ -410,8 +407,6 @@ foaf:Document  a          owl:Class ;
 
 
 # // Process Model    
-#    { "from": "Process workflow map", "to": "Process", "text": "componentOf" },
-#    { "from": "Process", "to": "Process workflow map", "text": "hasComponent" },
 
 :artifactProcessWorkflowMap 
         a                   owl:Class ;
@@ -441,9 +436,6 @@ foaf:Document  a          owl:Class ;
         .
 
 
-#    { "from": "Logic model indicators", "to": "Process", "text": "componentOf" },
-#    { "from": "Process", "to": "Logic model indicators", "text": "hasComponent" },
-
 :artifactLogicModelIndicators 
         a                   owl:Class ;
         rdfs:label          "Logic model indicators"@en ;
@@ -470,9 +462,6 @@ foaf:Document  a          owl:Class ;
         rdfs:range          :artifactLogicModelIndicators ;
         rdfs:inverseOf      :componentOf ;
         .
-
-#    { "from": "Action plan checklist", "to": "Process", "text": "componentOf" },
-#    { "from": "Process", "to": "Action plan checklist", "text": "hasComponent" },
 
 :artifactActionPlanChecklist 
         a                   owl:Class ;
@@ -503,8 +492,6 @@ foaf:Document  a          owl:Class ;
 
 
 #// Technology Model    
-#    { "from": "Technology components", "to": "Technology", "text": "componentOf" },
-#    { "from": "Technology", "to": "Technology components", "text": "hasComponent" },
 
 :artifactTechnologyComponents 
         a                   owl:Class ;
@@ -534,9 +521,6 @@ foaf:Document  a          owl:Class ;
         .
 
 
-#    { "from": "Information system services", "to": "Technology", "text": "componentOf" },
-#    { "from": "Technology", "to": "Information system services", "text": "hasComponent" },
-
 :artifactInformationSystemServices 
         a                   owl:Class ;
         rdfs:label          "Information system services"@en ;
@@ -563,9 +547,6 @@ foaf:Document  a          owl:Class ;
         rdfs:range          :artifactInformationSystemServices ;
         rdfs:inverseOf      :componentOf ;
         .
-
-#    { "from": "Activity enabling features", "to": "Technology", "text": "componentOf" },
-#    { "from": "Technology", "to": "Activity enabling features", "text": "hasComponent" },
 
 :artifactActivityEnablingFeatures 
         a                   owl:Class ;
@@ -596,8 +577,6 @@ foaf:Document  a          owl:Class ;
 
 
 # // instance of people    
-#    { "from": "Position", "to": "People", "text": "instanceOf" },
-#    { "from": "People", "to": "Position", "text": "hasInstacne" },
 
 :Position 
         a                   owl:Class ;
@@ -628,8 +607,6 @@ foaf:Document  a          owl:Class ;
 
 
 # // artifact interactions
-#    { "from": "Process workflow map", "to": "Position role responsibility", "text": "defines" },
-#    { "from": "Position role responsibility", "to": "Process workflow map", "text": "definedBy" },
 
 :defines 
         a                   owl:ObjectProperty ;
@@ -652,9 +629,6 @@ foaf:Document  a          owl:Class ;
         .
 
 
-#    { "from": "Logic model indicators", "to": "Competency behavior matrix", "text": "monitors" },
-#    { "from": "Competency behavior matrix", "to": "Logic model indicators", "text": "monitoredBy" },
-
 :monitors 
         a                   owl:ObjectProperty ;
         rdfs:label          "monitors"@en ;
@@ -674,9 +648,6 @@ foaf:Document  a          owl:Class ;
         rdfs:range          :artifactLogicModelIndicators ;
         rdfs:inverseOf      :monitors ;
         .
-
-#    { "from": "Action plan checklist", "to": "Skill maturity model", "text": "requires" },
-#    { "from": "Skill maturity model", "to": "Action plan checklist", "text": "requiredBy" },
 
 :requires 
         a                   owl:ObjectProperty ;
@@ -699,9 +670,6 @@ foaf:Document  a          owl:Class ;
         .
 
 
-#    { "from": "Activity enabling features", "to": "Action plan checklist", "text": "executes" },
-#    { "from": "Action plan checklist", "to": "Activity enabling features", "text": "executedWith" },
-
 :executes 
         a                   owl:ObjectProperty ;
         rdfs:label          "executes"@en ;
@@ -722,9 +690,6 @@ foaf:Document  a          owl:Class ;
         rdfs:inverseOf      :executedWith ;
         .
 
-
-#    { "from": "Technology components", "to": "Process workflow map", "text": "enables" },
-#    { "from": "Process workflow map", "to": "Technology components", "text": "enabledBy" },
 
 :enables 
         a                   owl:ObjectProperty ;
@@ -747,9 +712,6 @@ foaf:Document  a          owl:Class ;
         .
 
 
-#    { "from": "Information system services", "to": "Logic model indicators", "text": "dataFor" },
-#    { "from": "Logic model indicators", "to": "Information system services", "text": "dataFrom" },
-
 :dataFor 
         a                   owl:ObjectProperty ;
         rdfs:label          "provides data for"@en ;
@@ -770,9 +732,6 @@ foaf:Document  a          owl:Class ;
         rdfs:inverseOf      :dataFor ;
         .
 
-
-#    { "from": "Activity enabling features", "to": "Position role responsibility", "text": "assists" },
-#    { "from": "Position role responsibility", "to": "Activity enabling features", "text": "assistedBy" },
 
 :assists 
         a                   owl:ObjectProperty ;
@@ -795,9 +754,6 @@ foaf:Document  a          owl:Class ;
         .
 
 
-#    { "from": "Technology components", "to": "Competency behavior matrix", "text": "enables" },
-#    { "from": "Competency behavior matrix", "to": "Technology components", "text": "enabledBy" },
-
 :enables 
         a                   owl:ObjectProperty ;
         rdfs:label          "enables"@en ;
@@ -817,9 +773,6 @@ foaf:Document  a          owl:Class ;
         rdfs:range          :artifactTechnologyComponents ;
         rdfs:inverseOf      :enables ;
         .
-
-#    { "from": "Information system services", "to": "Skill maturity model", "text": "dataFor" },
-#    { "from": "Skill maturity model", "to": "Information system services", "text": "dataFrom" },
 
 :dataProvided 
         a                   owl:ObjectProperty ;
