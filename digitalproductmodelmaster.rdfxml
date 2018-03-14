@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:dc11="http://purl.org/dc/elements/1.1/"
+         xmlns:prov="http://www.w3.org/ns/prov#"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:schema="http://schema.org/"
+         xmlns:ns0="http://purl.org/vocab/vann/"
+         xmlns:bibo="http://purl.org/ontology/bibo/"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:ns1="http:/s/www.w3.org/2003/06/sw-vocab-status/ns#"
+         xmlns:ns2="http://www.w3.org/ns/shacl#">
+
+  <owl:Ontology rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/">
+    <rdfs:label xml:lang="en">Ontology for Digital Product Model Master</rdfs:label>
+    <rdfs:comment>An experimental ontology for defining entity relationships and data property definitions and constraints in a formal semantic representation.
+</rdfs:comment>
+    <dc11:date>$Date: 2018-03-09 12:23:00 $</dc11:date>
+    <prov:generatedAtTime>$Date: 2018-03-09 12:23:006 $</prov:generatedAtTime>
+    <dc:created>$Date: 2018-02-26 20:18:26 $</dc:created>
+    <dc:modified>$Date: 2018-03-09 12:23:00 $</dc:modified>
+    <dc11:description>
+The Digital Product Model Master (DPMM) RDF vocabulary, described using W3C RDF Schema and the Web Ontology Language.
+</dc11:description>
+    <dc11:title xml:lang="en">Digital Product Model Master (DPMM) Ontology</dc11:title>
+    <dc11:creator rdf:resource="http://github.com/asteriusj"/>
+    <schema:contributor rdf:resource="http://LinkedIn.com/jeffreyastewart/"/>
+    <schema:contributor rdf:resource="http://github.com/asteriusj"/>
+    <dc11:publisher rdf:resource="http://github.com/asteriusj"/>
+    <dc:license>http://creativecommons.org/licenses/by/2.0/</dc:license>
+    <ns0:preferredNamespacePrefix>dpmm</ns0:preferredNamespacePrefix>
+    <ns0:preferredNamespaceUri>https://github.com/asteriusj/digitalproductmodelmaster#</ns0:preferredNamespaceUri>
+    <dc:abstract>An experimental ontology for defining entity relationships and data property definitions and constraints in a formal semantic representation.
+</dc:abstract>
+    <owl:versionIRI xml:lang="en">https://github.com/asteriusj/digitalproductmodelmaster/Draft</owl:versionIRI>
+    <owl:versionInfo xml:lang="en">Draft</owl:versionInfo>
+    <bibo:status xml:lang="en">Draft</bibo:status>
+  </owl:Ontology>
+
+  <owl:class rdf:about="http://www.w3.org/2002/07/owl#Thing">
+  </owl:class>
+
+  <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <rdfs:label xml:lang="en">Concept</rdfs:label>
+    <skos:definition xml:lang="en">An idea or notion; a unit of thought.</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://schema.org/Event">
+    <rdfs:comment>An event happening at a certain time and location, such as a concert, lecture, or festival. Ticketing information may be added via the 'offers' property. Repeated events may be structured as separate Event objects.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Event</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <owl:equivalentClass rdf:resource="http://purl.org/dc/dcmitype/Event"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+    <rdfs:comment>A person.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    <rdfs:label>Person</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"/>
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+    <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://www.w3.org/ns/org#Organization">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdfs:label xml:lang="en">Organization</rdfs:label>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    <owl:hasKey>
+      <rdf:Description>
+        <rdf:first rdf:resource="http://www.w3.org/ns/org#identifier"/>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      </rdf:Description>
+    </owl:hasKey>
+
+    <rdfs:comment xml:lang="en">Represents a collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposable into hierarchical structures.  It is recommended that SKOS lexical labels should be used to label the Organization. In particular `skos:prefLabel` for the primary (possibly legally recognized name), `skos:altLabel` for alternative names (trading names, colloquial names) and `skos:notation` to denote a code from a code list. Alternative names: _Collective_ _Body_ _Org_ _Group_</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://schema.org/Place">
+    <rdfs:isDefinedBy rdf:resource="http://schema.org/"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
+    <rdfs:comment>
+An agent (eg. person, group, software or physical artifact).
+</rdfs:comment>
+    <rdfs:label>Agent</rdfs:label>
+    <ns1:term_status>stable</ns1:term_status>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Document">
+    <rdfs:comment>A document.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+    <rdfs:label>Document</rdfs:label>
+    <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    <owl:disjointWith rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+    <ns1:term_status>testing</ns1:term_status>
+  </owl:Class>
+
+  <rdfs:Class rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/Thing">
+    <rdfs:label>Thing</rdfs:label>
+    <rdfs:comment>The most generic type of item.</rdfs:comment>
+    <owl:equivalentClass rdf:resource="http://schema.org/Thing"/>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdfs:Class>
+
+  <owl:Class rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/Concept">
+    <rdfs:label xml:lang="en">Concept</rdfs:label>
+    <rdfs:comment xml:lang="en">an abstract idea; a general notion. Non physical entirty</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Thing"/>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/Event">
+    <rdfs:label xml:lang="en">Event</rdfs:label>
+    <rdfs:comment xml:lang="en">An event happening at a certain time and location</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Thing"/>
+    <owl:equivalentClass rdf:resource="http://schema.org/Event"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/Person">
+    <rdfs:label>Person</rdfs:label>
+    <rdfs:comment>A person. A person (alive, dead, undead, or fictional).</rdfs:comment>
+    <ns2:property>
+      <rdf:Description>
+        <ns2:path rdf:resource="http://xmlns.com/foaf/0.1/lastName"/>
+        <ns2:name>last name</ns2:name>
+        <ns2:description>A Person's last name (aka family name).</ns2:description>
+        <ns2:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <ns2:minLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ns2:minLength>
+        <ns2:maxLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</ns2:maxLength>
+        <ns2:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ns2:maxCount>
+        <ns2:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ns2:minCount>
+      </rdf:Description>
+    </ns2:property>
+
+    <rdfs:subClassOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Thing"/>
+    <rdfs:subClassOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Agent"/>
+    <owl:equivalentClass rdf:resource="http://schema.org/Person"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <owl:equivalentClass rdf:resource="https://github.com/vocol/salesforce/Person"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/Organization">
+    <rdfs:label xml:lang="en">Organization</rdfs:label>
+    <rdfs:comment xml:lang="en">a collection of people organized together into a community or other social, commercial or political structure.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Thing"/>
+    <rdfs:subClassOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Agent"/>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/ns/org#Organization"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/Place">
+    <rdfs:label xml:lang="en">Place</rdfs:label>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Thing"/>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/ns/org#schema"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/Artifact">
+    <rdfs:label xml:lang="en">Artifact</rdfs:label>
+    <rdfs:comment xml:lang="en">A software, document or data artifact</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Agent"/>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/Activty">
+    <rdfs:label xml:lang="en">Activity</rdfs:label>
+    <rdfs:comment xml:lang="en">Activities are a conceptual model of the interactions of basic business entities of Tools, Flows and Teams. </rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Concept"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/Flows">
+    <rdfs:label xml:lang="en">Flows</rdfs:label>
+    <rdfs:comment xml:lang="en">A pattern of business activity and actions, data exchange and workflows</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Activty"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/Tools">
+    <rdfs:label xml:lang="en">Tools</rdfs:label>
+    <rdfs:comment xml:lang="en">A physical item or technology that is be to achieve a goal or complete an action </rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Activty"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/Teams">
+    <rdfs:label xml:lang="en">Teams</rdfs:label>
+    <rdfs:comment xml:lang="en">A group of people with complementary skills required to complete a task, job, or project</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Activty"/>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/dataGen">
+    <rdfs:label xml:lang="en">dataGen</rdfs:label>
+    <rdfs:comment xml:lang="en">To</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/"/>
+    <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Flows"/>
+    <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Tools"/>
+    <rdfs:inverseOf>
+      <owl:ObjectProperty rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/genData">
+        <rdfs:label xml:lang="en">genData</rdfs:label>
+        <rdfs:comment xml:lang="en">To</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/"/>
+        <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Tools"/>
+        <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Flows"/>
+        <rdfs:inverseOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/dataGen"/>
+      </owl:ObjectProperty>
+    </rdfs:inverseOf>
+
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/actorIn">
+    <rdfs:label xml:lang="en">actor in</rdfs:label>
+    <rdfs:comment xml:lang="en">To</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/"/>
+    <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Teams"/>
+    <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Flows"/>
+    <rdfs:inverseOf>
+      <owl:ObjectProperty rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/hasActor">
+        <rdfs:label xml:lang="en">has actor</rdfs:label>
+        <rdfs:comment xml:lang="en">To</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/"/>
+        <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Flows"/>
+        <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Teams"/>
+        <rdfs:inverseOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/actorIn"/>
+      </owl:ObjectProperty>
+    </rdfs:inverseOf>
+
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/usedBy">
+    <rdfs:label xml:lang="en">used by</rdfs:label>
+    <rdfs:comment xml:lang="en">To</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/"/>
+    <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Tools"/>
+    <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Teams"/>
+    <rdfs:inverseOf>
+      <owl:ObjectProperty rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/uses">
+        <rdfs:label xml:lang="en">uses</rdfs:label>
+        <rdfs:comment xml:lang="en">To</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/"/>
+        <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Teams"/>
+        <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Tools"/>
+        <rdfs:inverseOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/usedBy"/>
+      </owl:ObjectProperty>
+    </rdfs:inverseOf>
+
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/Capability">
+    <rdfs:label xml:lang="en">Capability</rdfs:label>
+    <rdfs:comment xml:lang="en">Capabilities describe organizations ability to achieve a specific outcome enabled by organizational level skills embedded in people, process, and/or technology.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Concept"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/People">
+    <rdfs:label xml:lang="en">People</rdfs:label>
+    <rdfs:comment xml:lang="en">Individuals or members of a team responsibility for enabling a business capability </rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Concept"/>
+    <rdfs:subClassOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Person"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/Process">
+    <rdfs:label xml:lang="en">Process</rdfs:label>
+    <rdfs:comment xml:lang="en">Set of actions and steps defined to enable a business capability </rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Concept"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/Technology">
+    <rdfs:label xml:lang="en">Technology</rdfs:label>
+    <rdfs:comment xml:lang="en">Tools and machines used to solve real-world problems in support of a business capability </rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Concept"/>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/partOf">
+    <rdfs:label xml:lang="en">is part of</rdfs:label>
+    <rdfs:comment xml:lang="en">To be assocoiated with or ane element in </rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/"/>
+    <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/People"/>
+    <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Process"/>
+    <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Technology"/>
+    <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Capability"/>
+    <rdfs:inverseOf>
+      <owl:ObjectProperty rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/hasPart">
+        <rdfs:label xml:lang="en">has part</rdfs:label>
+        <rdfs:comment xml:lang="en">To have an element that is associated </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/"/>
+        <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Capability"/>
+        <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/People"/>
+        <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Process"/>
+        <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Technology"/>
+        <rdfs:inverseOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/partOf"/>
+      </owl:ObjectProperty>
+    </rdfs:inverseOf>
+
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/artifactSkillBehaviorMatrix">
+    <rdfs:label xml:lang="en">Skill behavior matrix</rdfs:label>
+    <rdfs:comment xml:lang="en">A </rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Artifact"/>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/componentOf">
+    <rdfs:label xml:lang="en">is a component of</rdfs:label>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/"/>
+    <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactSkillBehaviorMatrix"/>
+    <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactPositionRoleResponsibility"/>
+    <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactCareerPathLattice"/>
+    <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactProcessWorkflowMap"/>
+    <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactLogicModelIndicators"/>
+    <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactActionPlanChecklist"/>
+    <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactTechnologyComponents"/>
+    <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactInformationSystemServices"/>
+    <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactActivityEnablingFeatures"/>
+    <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/People"/>
+    <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Process"/>
+    <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Technology"/>
+    <rdfs:inverseOf>
+      <owl:ObjectProperty rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/hasComponent">
+        <rdfs:label xml:lang="en">hasComponent</rdfs:label>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/"/>
+        <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/People"/>
+        <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Process"/>
+        <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Technology"/>
+        <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactSkillBehaviorMatrix"/>
+        <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactPositionRoleResponsibility"/>
+        <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactCareerPathLattice"/>
+        <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactProcessWorkflowMap"/>
+        <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactLogicModelIndicators"/>
+        <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactActionPlanChecklist"/>
+        <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactTechnologyComponents"/>
+        <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactInformationSystemServices"/>
+        <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactActivityEnablingFeatures"/>
+        <rdfs:inverseOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/componentOf"/>
+      </owl:ObjectProperty>
+    </rdfs:inverseOf>
+
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/artifactPositionRoleResponsibility">
+    <rdfs:label xml:lang="en">Position role responsibility</rdfs:label>
+    <rdfs:comment xml:lang="en">A </rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Artifact"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/artifactCareerPathLattice">
+    <rdfs:label xml:lang="en">Career path lattice</rdfs:label>
+    <rdfs:comment xml:lang="en">A </rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Artifact"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/artifactProcessWorkflowMap">
+    <rdfs:label xml:lang="en">Process workflow map</rdfs:label>
+    <rdfs:comment xml:lang="en">A </rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Artifact"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/artifactLogicModelIndicators">
+    <rdfs:label xml:lang="en">Logic model indicators</rdfs:label>
+    <rdfs:comment xml:lang="en">A </rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Artifact"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/artifactActionPlanChecklist">
+    <rdfs:label xml:lang="en">Action plan checklist</rdfs:label>
+    <rdfs:comment xml:lang="en">A </rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Artifact"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/artifactTechnologyComponents">
+    <rdfs:label xml:lang="en">Technology components</rdfs:label>
+    <rdfs:comment xml:lang="en">A </rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Artifact"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/artifactInformationSystemServices">
+    <rdfs:label xml:lang="en">Information system services</rdfs:label>
+    <rdfs:comment xml:lang="en">A </rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Artifact"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/artifactActivityEnablingFeatures">
+    <rdfs:label xml:lang="en">Activity enabling features</rdfs:label>
+    <rdfs:comment xml:lang="en">A </rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Artifact"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/Position">
+    <rdfs:label xml:lang="en">Position</rdfs:label>
+    <rdfs:comment xml:lang="en">A </rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/People"/>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/instanceOf">
+    <rdfs:label xml:lang="en">an instance of</rdfs:label>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/"/>
+    <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Position"/>
+    <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/People"/>
+    <rdfs:inverseOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/hasInstacne"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/hasInstacne">
+    <rdfs:label xml:lang="en">has instacne</rdfs:label>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/"/>
+    <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/People"/>
+    <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/Position"/>
+    <rdfs:inverseOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/hasInstacne"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/defines">
+    <rdfs:label xml:lang="en">defines</rdfs:label>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/"/>
+    <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactProcessWorkflowMap"/>
+    <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactPositionRoleResponsibility"/>
+    <rdfs:inverseOf>
+      <owl:ObjectProperty rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/definedBy">
+        <rdfs:label xml:lang="en">definedBy</rdfs:label>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/"/>
+        <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactPositionRoleResponsibility"/>
+        <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactProcessWorkflowMap"/>
+        <rdfs:inverseOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/defines"/>
+      </owl:ObjectProperty>
+    </rdfs:inverseOf>
+
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/monitors">
+    <rdfs:label xml:lang="en">monitors</rdfs:label>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/"/>
+    <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactLogicModelIndicators"/>
+    <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactCareerPathLattice"/>
+    <rdfs:inverseOf>
+      <owl:ObjectProperty rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/monitoredBy">
+        <rdfs:label xml:lang="en">definedBy</rdfs:label>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/"/>
+        <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactCareerPathLattice"/>
+        <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactLogicModelIndicators"/>
+        <rdfs:inverseOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/monitors"/>
+      </owl:ObjectProperty>
+    </rdfs:inverseOf>
+
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/requires">
+    <rdfs:label xml:lang="en">requires</rdfs:label>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/"/>
+    <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactActionPlanChecklist"/>
+    <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactSkillBehaviorMatrix"/>
+    <rdfs:inverseOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/requiredBy"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/requiredBy">
+    <rdfs:label xml:lang="en">requiredBy</rdfs:label>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/"/>
+    <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactSkillBehaviorMatrix"/>
+    <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactActionPlanChecklist"/>
+    <rdfs:inverseOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/requires"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/executes">
+    <rdfs:label xml:lang="en">executes</rdfs:label>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/"/>
+    <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactActivityEnablingFeatures"/>
+    <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactActionPlanChecklist"/>
+    <rdfs:inverseOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/requiredBy"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/executedWith">
+    <rdfs:label xml:lang="en">executedWith</rdfs:label>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/"/>
+    <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactActionPlanChecklist"/>
+    <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactActivityEnablingFeatures"/>
+    <rdfs:inverseOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/executedWith"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/enables">
+    <rdfs:label xml:lang="en">executes</rdfs:label>
+    <rdfs:label xml:lang="en">enables</rdfs:label>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/"/>
+    <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactTechnologyComponents"/>
+    <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactProcessWorkflowMap"/>
+    <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactCareerPathLattice"/>
+    <rdfs:inverseOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/enabledBy"/>
+    <rdfs:inverseOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/assistedBy"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/enabledBy">
+    <rdfs:label xml:lang="en">executedWith</rdfs:label>
+    <rdfs:label xml:lang="en">enabledBy</rdfs:label>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/"/>
+    <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactProcessWorkflowMap"/>
+    <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactCareerPathLattice"/>
+    <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactTechnologyComponents"/>
+    <rdfs:inverseOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/enables"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/dataFor">
+    <rdfs:label xml:lang="en">provides data for</rdfs:label>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/"/>
+    <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactInformationSystemServices"/>
+    <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactLogicModelIndicators"/>
+    <rdfs:inverseOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/enabledBy"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/dataFrom">
+    <rdfs:label xml:lang="en">retrieves data from</rdfs:label>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/"/>
+    <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactLogicModelIndicators"/>
+    <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactInformationSystemServices"/>
+    <rdfs:inverseOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/dataFor"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/assists">
+    <rdfs:label xml:lang="en">assists</rdfs:label>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/"/>
+    <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactActivityEnablingFeatures"/>
+    <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactPositionRoleResponsibility"/>
+    <rdfs:inverseOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/assistedBy"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/assistedBy">
+    <rdfs:label xml:lang="en">assistedBy</rdfs:label>
+    <rdfs:comment xml:lang="en"></rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/"/>
+    <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactPositionRoleResponsibility"/>
+    <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactActivityEnablingFeatures"/>
+    <rdfs:inverseOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/assists"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/dataProvided">
+    <rdfs:label xml:lang="en">provides data for</rdfs:label>
+    <rdfs:comment xml:lang="en">Info services provide data required by individual skills for role</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/"/>
+    <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactInformationSystemServices"/>
+    <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactSkillBehaviorMatrix"/>
+    <rdfs:inverseOf>
+      <owl:ObjectProperty rdf:about="https://github.com/asteriusj/digitalproductmodelmaster/dataRequired">
+        <rdfs:label xml:lang="en">requires data from</rdfs:label>
+        <rdfs:comment xml:lang="en">Individual skills needed for role requires data from info system</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/"/>
+        <rdfs:domain rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactSkillBehaviorMatrix"/>
+        <rdfs:range rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/artifactInformationSystemServices"/>
+        <rdfs:inverseOf rdf:resource="https://github.com/asteriusj/digitalproductmodelmaster/dataProvided"/>
+      </owl:ObjectProperty>
+    </rdfs:inverseOf>
+
+  </owl:ObjectProperty>
+
+</rdf:RDF>
