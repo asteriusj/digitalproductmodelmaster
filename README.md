@@ -9,7 +9,7 @@ A DPM is much more than that. It is a digital semantic model of those things and
 A  semantic representation of information contains the meaning of the encapsulated relationships between between entities, actors, actions and data. 
 In other words, the knowledge and information is contained in the data.
 
-#So what is the Digital Product Model Master (DPMM) Ontology?
+# So what is the Digital Product Model Master (DPMM) Ontology?
 * This is the digital framework or scaffolding for constructing custom Digital Product Master.
 * Provide predefined structures of DPM elements as a template for customization
 * The semantic representation contains the meaning of entities and their encapsulated relationships . 
@@ -26,4 +26,4 @@ An example is clustering and regression, two common Big Data analytical techniqu
 
 By simply asserting data fields as ‘sameAs’ or ‘similarTo’ common standards, a powerful new set of question answering capabilities is unlessed. 
 
-##DPM provides the pathway to answers to question not thought possible before.
+## DPM provides the pathway to answers to question not thought possible before.
