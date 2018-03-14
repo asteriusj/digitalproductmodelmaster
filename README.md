@@ -14,3 +14,16 @@ In other words, the knowledge and information is contained in the data.
 * Provide predefined structures of DPM elements as a template for customization
 * The semantic representation contains the meaning of entities and their encapsulated relationships . 
 * In other words, the knowledge and information is contained in the data.
+
+See visualization of DPMM via WebVowl (http://www.visualdataweb.de/webvowl/#iri=https://raw.githubusercontent.com/asteriusj/digitalproductmodelmaster/master/digitalproductmodelmaster.ttl)
+
+
+Ontologies and Semantic Vocabulary based datasets are represented as a Graph data model. The relationships between data entities, data properties and other entities are defined with semantic definitions  from common Linked Data references. This provide contextual meaning outside of an internal only dataset.
+
+The graph model allows inference engines to deduce new facts from traversing and combining linked data.  They also can work backwards from goal assertions to find facts need to achieve that goal. 
+
+An example is clustering and regression, two common Big Data analytical techniques.
+
+By simply asserting data fields as ‘sameAs’ or ‘similarTo’ common standards, a powerful new set of question answering capabilities is unlessed. 
+
+##DPM provides the pathway to answers to question not thought possible before.
