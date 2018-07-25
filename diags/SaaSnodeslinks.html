@@ -2,14 +2,14 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DPMM Entity Graph </title>
-<meta name="description" content="A force directed graph of Digital Product Model Msater entities" />
+<title>SaaS Digital Product Entity Graph </title>
+<meta name="description" content="A force directed graph of SaaS Digital Product Master entities" />
 <!-- Copyright 2018 Asterius Media LLC. -->
 <meta charset="UTF-8">
 
 <script src="https://gojs.net/latest/release/go.js"></script>
 
-<script src="./dpmm.js"></script>
+<script src="./SaaSnodeslinks.js"></script>
 
 <script id="code">
 function init() {
@@ -210,10 +210,7 @@ function init() {
                   isMultiline: false  
                   
                 },
-                new go.Binding("text", "text").makeTwoWay()),
-                {
-                    toolTip: sharedToolTip
-                }
+                new go.Binding("text", "text").makeTwoWay())
             )
         );
     myDiagram.linkTemplateMap.add("", linkTemplate);
@@ -367,10 +364,7 @@ function init() {
                 isMultiline: false 
                 
               },
-              new go.Binding("text", "text").makeTwoWay()),
-              {
-                toolTip: sharedToolTip
-              },
+              new go.Binding("text", "text").makeTwoWay())
  
         );
       myDiagram.nodeTemplateMap.add("entity", entityTemplate);  
