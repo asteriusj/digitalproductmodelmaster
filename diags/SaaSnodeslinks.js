@@ -20,7 +20,7 @@ var nodeDataArray = [
     { "group": "2", "key":"activity",    "text":"Activity", "description":"Workflow Activity \neg. Software Development",  "color":"white",  expanded: true, "parent":"stream" },
 
 
-    { "group": "2", "key": "Capability", "text": "Capability","description":"Business Capabiliy \neg. Product Software Development", },
+    { "group": "2", "key": "Capability", "text": "Capability","description":"Business Capability \neg. Product Software Development", },
     
     // { "group": "2", "key": "Tools", "text": "Tools", "color": "DarkViolet" }, 
     { "group": "3", "key": "Technology", "text": "Technology", "description": "Capability Technology", "color": "orange" },

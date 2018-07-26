@@ -13,7 +13,7 @@ var nodeDataArray =  [
 { category:"entity", "key":"stream",      "text":"Value Stream",      "description":"Value Stream",  "color":"white",  expanded: true, "parent":"chain" },
 { category:"entity", "key":"activity",    "text":"Worfklow Activity",    "description":"Workflow Activity",  "color":"white",  expanded: true, "parent":"stream" },
 
-{ category:"entity", "key":"capability",  "text":"Business Capability",  "description":"Business Capability Model",  "color":"orange",  expanded: true, "parent":"workflow" },
+{ category:"entity", "key":"capability",  "text":"Business Capability",  "descriptioxn":"Business Capability Model",  "color":"orange",  expanded: true, "parent":"workflow" },
 
 { category:"entity", "key":"competency",  "text":"Competency",  "description":"Team Competency Model",  "color":"orange",  expanded: true, "parent":"capability" },
 { category:"entity", "key":"position",    "text":"Position",    "description":"Position Role Responsibility ",    "expanded": true, "parent":"competency" },

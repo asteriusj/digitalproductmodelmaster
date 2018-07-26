@@ -1,0 +1,475 @@
+{
+  "@id": "",
+  "@context": [
+    
+  ],
+  "@graph": [
+    {
+      "@id": "",
+      "@type": "skos:Concept",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "",
+      "dc:title": "",
+      "rdfs:description": "",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "skos:inScheme": [
+        
+      ],
+      "skos:prefLabel": "",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "dpm",
+      "@type": "dpmm:DPM",
+      "rdf:type": "skos:ConceptScheme",
+      "dbo:type": "",
+      "rdfs:label": "Digital Product Masters",
+      "dc:title": "Digital Product Masters are live digital models an enterprise",
+      "rdfs:description": "Digital Product Masters comprise a dynamic model of business entities and relationships that help people explore, and better understand, the complexities of the organization",
+      "dc:abstract": "Digital Product Master: Living repository of a single source of truth about the firm, including its business model canvases, strategy maps, industry value chain, value stream, workflow activities, and enabling business capability people, process, and technology.",
+      "rdfs:comment": "DPM constitute live, interactive models of the enterprise and its value-stream activities enabled by People, Process, and Technology",
+      "skos:hasScheme": [
+        "strategy"
+      ],
+      "skos:prefLabel": "",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "strategy",
+      "@type": "dpmm:Strategy",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Strategy BMC",
+      "dc:title": "Strategy Business Model Canvas",
+      "rdfs:description": "",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "dpmm:hasTheme": [
+        "theme",
+        "Theme:Retain_high_value_customers"
+      ],
+      "dpmm:hasParts": [
+        "ProductRisks",
+        "CustomerSegments",
+        "BusinessFit"
+      ],
+      "rdfs:seeAlso": [
+        "https://www.linkedin.com/pulse/part-3-digital-product-master-case-tostudy-jeffrey-stewart/"
+      ],
+      "skos:inScheme": [
+        "dpm"
+      ],
+      "skos:prefLabel": "",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "theme",
+      "@type": "dpmm:Theme",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Strategic Theme",
+      "dc:title": "Strategy Outcome Theme \n eg. Retain High Value Customers",
+      "rdfs:description": "",
+      "dc:abstract": "Strategic themes define a singular purpose of activities that drive or deliver value via components of a value chain",
+      "rdfs:comment": "",
+      "dpmm:isDeliveredBy": [
+        "value_chain"
+      ],
+      "skos:inScheme": [
+        "strategy"
+      ],
+      "skos:prefLabel": "Strategy Outcome Theme",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "value_chain",
+      "@type": "dpmm:ValueChain",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Value Chain ",
+      "dc:title": "Value Chain Component \n eg. Product Development",
+      "rdfs:description": "",
+      "dc:abstract": "High-level depiction of the how the digital firm and its partners add value to the Customer and Users;",
+      "rdfs:comment": "",
+      "dpmm:isSupportedBy": [
+        "value_stream"
+      ],
+      "skos:inScheme": [
+        
+      ],
+      "skos:prefLabel": "Value Chain Component \n eg. Product Development",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "value_stream",
+      "@type": "dpmm:ValueStream",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Value Stream",
+      "dc:title": "Value Stream \n eg. Requirement-to-deploy",
+      "rdfs:description": "",
+      "dc:abstract": "High-level depiction of the primary and secondary value-adding activities",
+      "rdfs:comment": "",
+      "dpmm:isAccomplishedBy": [
+        "workflow_activity"
+      ],
+      "skos:inScheme": [
+        
+      ],
+      "skos:prefLabel": "Value Stream",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "workflow_activity",
+      "@type": "dpmm:Activity",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Workflow Activity",
+      "dc:title": "Workflow Activity \n eg. Software Development ",
+      "rdfs:description": "Visual depiction with text descriptions about “what” things are done to deliver its value proposition",
+      "dc:abstract": "The workflow activities represent what an organization does in a value stream while executing the business model of the firm.",
+      "rdfs:comment": "",
+      "dpmm:isEnabledBy": [
+        "business_capability"
+      ],
+      "skos:inScheme": [
+        
+      ],
+      "skos:prefLabel": "Workflow Activity",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "business_capability",
+      "@type": "dpmm:Capability",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Business Capability",
+      "dc:title": "Business Capability Model",
+      "rdfs:description": "Business Capability \n eg. Product Software Development",
+      "dc:abstract": "Detailed descriptions of “what” and organization does, i.e. the capacity, materials and expertise an organization needs in order to perform core functions",
+      "rdfs:comment": "",
+      "dpmm:isComposedOf": [
+        "technology",
+        "process",
+        "people"
+      ],
+      "skos:inScheme": [
+        
+      ],
+      "skos:prefLabel": "Business Capability \n eg. Product Software Development",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "technology",
+      "@type": "dpmm:Technology",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Technology",
+      "dc:title": "Technology Architecture Model",
+      "rdfs:description": "",
+      "dc:abstract": "the process of development of methodical information technology specifications, models and guidelines",
+      "rdfs:comment": "",
+      "dpmm:hasParts": [
+        "application_feature",
+        "system_service",
+        "logical_component"
+      ],
+      "skos:inScheme": [
+        "business_capability"
+      ],
+      "skos:prefLabel": "Technology Architecture Model",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "process",
+      "@type": "dpmm:Process",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Process",
+      "dc:title": "Process Flow Model ",
+      "rdfs:description": "",
+      "dc:abstract": "a series of actions or steps taken in order to achieve a particular end",
+      "rdfs:comment": "",
+      "dpmm:hasParts": [
+        "process_map",
+        "action_checklist",
+        "logic_model"
+      ],
+      "skos:inScheme": [
+        "business_capability"
+      ],
+      "skos:prefLabel": "Process Flow Model",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "people",
+      "@type": "dpmm:People",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "People",
+      "dc:title": "People Competency Model",
+      "rdfs:description": "",
+      "dc:abstract": "the ability to do something successfully or efficiently.",
+      "rdfs:comment": "",
+      "dpmm:hasParts": [
+        "job_position",
+        "skill_mattix",
+        "behavior_maturity"
+      ],
+      "skos:inScheme": [
+        "business_capability"
+      ],
+      "skos:prefLabel": "People Competency Model",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "process_map",
+      "@type": "dpmm:ProcessMap",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Process maps",
+      "dc:title": "Process Workflow Map",
+      "rdfs:description": "",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "skos:inScheme": [
+        "process"
+      ],
+      "skos:prefLabel": "Process workflow map ",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "action_checklist",
+      "@type": "dpmm:ActionChecklist",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Action checklists",
+      "dc:title": "Action Plan Checklist",
+      "rdfs:description": "",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "skos:inScheme": [
+        "process"
+      ],
+      "skos:prefLabel": "Action plan checklist",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "logic_model",
+      "@type": "dpmm:LogicModel",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Logic models",
+      "dc:title": "Logic model indicators",
+      "rdfs:description": "Logic Model Indicators ",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "skos:inScheme": [
+        "process"
+      ],
+      "skos:prefLabel": "Logic model indicators",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "job_position",
+      "@type": "dpmm:JobPosition",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Position descriptions",
+      "dc:title": "Role Responsibility Position Description",
+      "rdfs:description": "",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "skos:inScheme": [
+        "people"
+      ],
+      "skos:prefLabel": "Job Position description Role Responsibility ",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "skill_mattix",
+      "@type": "dpmm:SkillMatrix",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Skill behavior matrix",
+      "dc:title": "Skill Behavior Maturity Matrix",
+      "rdfs:description": "",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "skos:inScheme": [
+        "people"
+      ],
+      "skos:prefLabel": "Skill Maturity Model Skill behavior matrix",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "behavior_maturity",
+      "@type": "dpmm:BehaviorMaturity",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Behavior maturities",
+      "dc:title": "Behavior Maturity Model",
+      "rdfs:description": "",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "skos:inScheme": [
+        "people"
+      ],
+      "skos:prefLabel": "Competency Behavior Matrix Career path lattice",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "career_lattice",
+      "@type": "dpmm:CareerLattice",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Career lattices",
+      "dc:title": "Career path lattice",
+      "rdfs:description": "",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "skos:inScheme": [
+        "people"
+      ],
+      "skos:prefLabel": "Career path lattice",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "logical_component",
+      "@type": "dpmm:LogicalComponent",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Technology components",
+      "dc:title": "Logical Technology Component",
+      "rdfs:description": "Logical Technology Components",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "skos:inScheme": [
+        "technology"
+      ],
+      "skos:prefLabel": "Technology components",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "system_service",
+      "@type": "dpmm:SystemService",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Info system services",
+      "dc:title": " Information system service",
+      "rdfs:description": "",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "skos:inScheme": [
+        "technology"
+      ],
+      "skos:prefLabel": "Information System Services",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "application_feature",
+      "@type": "dpmm:ApplicationFeature",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Application features",
+      "dc:title": "Application System Feature",
+      "rdfs:description": "",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "skos:inScheme": [
+        "technology"
+      ],
+      "skos:prefLabel": "Activity enabling features",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      
+    }
+  ]
+}

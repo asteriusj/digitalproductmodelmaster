@@ -1,0 +1,825 @@
+{
+  "@id": "dpm",
+  "@context": {
+    "dpmm": "https://s3.amazonaws.com/dpmm.astereiusmedia.com/digitalproductmodelmaster.ttl",
+    "schema": "http://schema.org/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "org": "http://www.w3.org/ns/org#",
+    "dce": "http://purl.org/dc/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "bio": "http://purl.org/vocab/bio/0.1/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "acl": "http://www.w3.org/ns/auth/acl#",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "dbo": "http://dbpedia.org/ontology/",
+    "dbp": "http://dbpedia.org/property/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "dbr": "http://dbpedia.org/resource/",
+    "wot": "http://xmlns.com/wot/0.1/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "vs": "http://www.w3.org/2003/06/sw-vocab-status/ns#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "sioc": "http://rdfs.org/sioc/ns#",
+    "dc": "http://purl.org/dc/elements/1.1/"
+  },
+  "@graph": [
+    {
+      "@id": "dpm",
+      "@type": "dpmm:DPM",
+      "rdf:type": "skos:ConceptScheme",
+      "dbo:type": "",
+      "rdfs:label": "Digital Product Masters",
+      "dc:title": "Digital Product Masters are live digital models an enterprise",
+      "rdfs:description": "Digital Product Masters comprise a dynamic model of business entities and relationships that help people explore, and better understand, the complexities of the organization",
+      "dc:abstract": "Digital Product Master: Living repository of a single source of truth about the firm, including its business model canvases, strategy maps, industry value chain, value stream, workflow activities, and enabling business capability people, process, and technology.",
+      "rdfs:comment": "DPM constitute live, interactive models of the enterprise and its value-stream activities enabled by People, Process, and Technology",
+      "skos:hasScheme": [
+        "strategy"
+      ],
+      "skos:prefLabel": "",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "strategy",
+      "@type": "dpmm:Strategy",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Strategy BMC",
+      "dc:title": "Strategy Business Model Canvas",
+      "rdfs:description": "",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "dpmm:hasTheme": [
+        "theme",
+        "Theme:Retain_high_value_customers"
+      ],
+      "dpmm:hasParts": [
+        "ProductRisks",
+        "CustomerSegments",
+        "BusinessFit"
+      ],
+      "rdfs:seeAlso": [
+        "https://www.linkedin.com/pulse/part-3-digital-product-master-case-tostudy-jeffrey-stewart/"
+      ],
+      "skos:inScheme": [
+        "dpm"
+      ],
+      "skos:prefLabel": "",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "Theme:Retain_high_value_customers",
+      "@type": "dpmm:Theme",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Retain high-value customers",
+      "dc:title": "",
+      "rdfs:description": "Retain high-value customers through product innovation",
+      "dc:abstract": "high-value customer retention through product innovation comprised creating new software and related multimedia content to ensure user success",
+      "rdfs:comment": "",
+      "rdf:instanceOf": "theme",
+      "dpmm:isDeliveredBy": [
+        "ValueChain:Plan",
+        "ValueChain:Build_Product_Development",
+        "ValueChain:Deliver",
+        "ValueChain:Run",
+        "ValueChain:Cultivate"
+      ],
+      "skos:inScheme": [
+        
+      ],
+      "rdfs:seeAlso": [
+        "https://media.licdn.com/dms/image/C4E12AQHpvoPiWkzKdw/article-inline_image-shrink_1000_1488/0?e=2131920000&v=beta&t=nc9LjECJwRkHD-V2k2xohu3qGLdwF1GqevkoVuvuKJg"
+      ],
+      "skos:prefLabel": "",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "ValueChain:Plan",
+      "@type": "dpmm:ValueChain",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Plan",
+      "dc:title": "Value Chain Component: Plan ",
+      "rdfs:description": "",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "rdf:instanceOf": "value_chain",
+      "dpmm:isSupportedBy": [
+        
+      ],
+      "skos:inScheme": [
+        
+      ],
+      "rdfs:seeAlso": [
+        
+      ],
+      "skos:prefLabel": "",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "ValueChain:Build_Product_Development",
+      "@type": "dpmm:ValueChain",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Build / Product Development",
+      "dc:title": "Value Chain Component: Build /Product Development ",
+      "rdfs:description": "",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "rdf:instanceOf": "value_chain",
+      "dpmm:isSupportedBy": [
+        "ValueStream:Strategy_to_Portfolio",
+        "ValueStream:Requirements_to_Deploy"
+      ],
+      "skos:inScheme": [
+        
+      ],
+      "rdfs:seeAlso": [
+        "https://media.licdn.com/dms/image/C4E12AQEJaV6DQ2tIzw/article-inline_image-shrink_400_744/0?e=2131920000&v=beta&t=U8lOZLmfGKsfi_XV2ziEEn0jys_zHfLzWkvCU26Ws0A"
+      ],
+      "skos:prefLabel": "",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "ValueChain:Deliver",
+      "@type": "dpmm:ValueChain",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Deliver",
+      "dc:title": "Value Chain Component: Deliver ",
+      "rdfs:description": "",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "rdf:instanceOf": "value_chain",
+      "dpmm:isSupportedBy": [
+        
+      ],
+      "skos:inScheme": [
+        
+      ],
+      "rdfs:seeAlso": [
+        
+      ],
+      "skos:prefLabel": "",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "ValueChain:Run",
+      "@type": "dpmm:ValueChain",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Run",
+      "dc:title": "Value Chain Component: Run ",
+      "rdfs:description": "",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "rdf:instanceOf": "value_chain",
+      "dpmm:isSupportedBy": [
+        
+      ],
+      "skos:inScheme": [
+        
+      ],
+      "rdfs:seeAlso": [
+        
+      ],
+      "skos:prefLabel": "",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "ValueChain:Cultivate",
+      "@type": "dpmm:ValueChain",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Value Chain: Cultivate",
+      "dc:title": " Cultivate Value Chain Component: ",
+      "rdfs:description": "",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "rdf:instanceOf": "value_chain",
+      "dpmm:isSupportedBy": [
+        
+      ],
+      "skos:inScheme": [
+        
+      ],
+      "rdfs:seeAlso": [
+        
+      ],
+      "skos:prefLabel": "",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "ValueStream:Strategy_to_Portfolio",
+      "@type": "dpmm:ValueStream",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Value Stream: Strategy-to-Portfolio",
+      "dc:title": "Strategy-to-Portfolio Value Stream ",
+      "rdfs:description": "",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "rdf:instanceOf": "value_stream",
+      "dpmm:isAccomplishedBy": [
+        "Activity:StrategicInfluences",
+        "Activity:ProductRoadmap"
+      ],
+      "skos:inScheme": [
+        
+      ],
+      "rdfs:seeAlso": [
+        
+      ],
+      "skos:prefLabel": "",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "Activity:StrategicInfluences",
+      "@type": "dpmm:Activity",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Activity: Strategi cInfluences ",
+      "dc:title": "Strategic Influences Workflow Activity",
+      "rdfs:description": "",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "rdf:instanceOf": "workflow_activity",
+      "dpmm:isEnabledBy": [
+        
+      ],
+      "skos:inScheme": [
+        
+      ],
+      "rdfs:seeAlso": [
+        
+      ],
+      "skos:prefLabel": "",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "Activity:ProductRoadmap",
+      "@type": "dpmm:Activity",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Activity: ProductRoadmap ",
+      "dc:title": "Product Roadmap Workflow Activity",
+      "rdfs:description": "",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "rdf:instanceOf": "workflow_activity",
+      "dpmm:isEnabledBy": [
+        
+      ],
+      "skos:inScheme": [
+        
+      ],
+      "rdfs:seeAlso": [
+        
+      ],
+      "skos:prefLabel": "",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "ValueStream:Requirements_to_Deploy",
+      "@type": "dpmm:ValueStream",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "ValueStream: Requirements-to-Deploy",
+      "dc:title": "Requirements-to-Deploy Value Stream Activities",
+      "rdfs:description": "",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "rdf:instanceOf": "value_stream",
+      "dpmm:isAccomplishedBy": [
+        "Activity:Software_Development",
+        "Activity:Product_Quality_Assurance",
+        "Activity:Ready_for_Production"
+      ],
+      "skos:inScheme": [
+        
+      ],
+      "rdfs:seeAlso": [
+        "https://media.licdn.com/dms/image/C4E12AQEjooeVz_KwLA/article-inline_image-shrink_1500_2232/0?e=2131920000&v=beta&t=0ECOorLijJOlpXOCApWVQ3nLsREiUYD_d2MQGIAmauc"
+      ],
+      "skos:prefLabel": "",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "Activity:Software_Development",
+      "@type": "dpmm:Activity",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Activity: Software Development  ",
+      "dc:title": "Software Development Workflow Activity ",
+      "rdfs:description": "Software development constitutes the core for creating, enhancing, and maintaining their SaaS platform",
+      "dc:abstract": "Software development entails linking the value stream, requirements to deploy, to a set of workflow activities that included software development",
+      "rdfs:comment": "",
+      "rdf:instanceOf": "workflow_activity",
+      "dpmm:isEnabledBy": [
+        "Capability:Product_Software_Development"
+      ],
+      "skos:inScheme": [
+        
+      ],
+      "rdfs:seeAlso": [
+        
+      ],
+      "skos:prefLabel": "",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "Activity:Product_Quality_Assurance",
+      "@type": "dpmm:Activity",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Activity: Product Quality Assurance ",
+      "dc:title": "Product_Quality_Assurance Workflow Activity ",
+      "rdfs:description": "",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "rdf:instanceOf": "workflow_activity",
+      "dpmm:isEnabledBy": [
+        
+      ],
+      "skos:inScheme": [
+        
+      ],
+      "rdfs:seeAlso": [
+        
+      ],
+      "skos:prefLabel": "",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "Activity:Ready_for_Production",
+      "@type": "dpmm:Activity",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Activity: Ready_for_Production  ",
+      "dc:title": "Workflow Activity: Ready_for_Production ",
+      "rdfs:description": "",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "rdf:instanceOf": "workflow_activity",
+      "dpmm:isEnabledBy": [
+        
+      ],
+      "skos:inScheme": [
+        
+      ],
+      "rdfs:seeAlso": [
+        
+      ],
+      "skos:prefLabel": "",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "Capability:Product_Software_Development",
+      "@type": "dpmm:Capability",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Capability: Product Software Development ",
+      "dc:title": "Business Capability: Product Software Development",
+      "rdfs:description": "Ability of development team to produce product features user stories in a manner that is effecient adn effective",
+      "dc:abstract": "Business capabilities align workflow activities that the capability enables. In this case entailed the capability of product software development.",
+      "rdfs:comment": "",
+      "rdf:instanceOf": "business_capability",
+      "dpmm:isComposedOf": [
+        "Technology:",
+        "Process:",
+        "People:"
+      ],
+      "skos:inScheme": [
+        
+      ],
+      "rdfs:seeAlso": [
+        "https://media.licdn.com/dms/image/C4E12AQE6RDM7X7yL8A/article-inline_image-shrink_1000_1488/0?e=2131920000&v=beta&t=GOLAnATVWzt3fIjShGwYGfQiZcDKcJkiuPwB65klX-8"
+      ],
+      "skos:prefLabel": "Business Capability \n eg. Product Software Development",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "Technology:Product_Software_Development",
+      "@type": "dpmm:Technology",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Technology: Product Software Development",
+      "dc:title": "Technology Architecture Model for Product_Software_Development",
+      "rdfs:description": "",
+      "dc:abstract": "the process of development of methodical information technology specifications, models and guidelines",
+      "rdfs:comment": "Features — a distinguishing characteristic of a product or service, meets a particular customer need, enables workflow execution or automation and seen as a benefit or of value",
+      "rdf:instanceOf": "technology",
+      "dpmm:hasParts": [
+        "ApplicationFeature:Product_Software_Development",
+        "SystemService:Product_Software_Development",
+        "LogicalComponent:Product_Software_Development"
+      ],
+      "skos:inScheme": [
+        "Capability:Product_Software_Development"
+      ],
+      "rdfs:seeAlso": [
+        "https://media.licdn.com/dms/image/C4E12AQHLuNsCw5qweg/article-inline_image-shrink_1000_1488/0?e=2131920000&v=beta&t=se9N_RKcjKNoe6P1dW2DL-kxwCDzunQl8tSgp5xrjKk"
+      ],
+      "skos:prefLabel": "Technology Architecture Model",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "LogicalComponent:Product_Software_Development",
+      "@type": "dpmm:LogicalComponent",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Components: Product Software Development",
+      "dc:title": "Product_Software_Development Logical Technology Components  ",
+      "rdfs:description": "Logical Technology Components",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "rdf:instanceOf": "",
+      "dmmm:partOf": [
+        "Technology:Product_Software_Development"
+      ],
+      "skos:inScheme": [
+        
+      ],
+      "skos:prefLabel": "Technology components",
+      "rdfs:seeAlso": [
+        
+      ],
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "SystemService:Product_Software_Development",
+      "@type": "dpmm:SystemService",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Services: Product Software Development",
+      "dc:title": " Information system services for Product_Software_Development",
+      "rdfs:description": "",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "rdf:instanceOf": "",
+      "dmmm:partOf": [
+        "Technology:Product_Software_Development"
+      ],
+      "skos:inScheme": [
+        
+      ],
+      "rdfs:seeAlso": [
+        "https://media.licdn.com/dms/image/C4E12AQFO1cTb3CIXuw/article-inline_image-shrink_1500_2232/0?e=2131920000&v=beta&t=zcnd1LXGWf1OWbKhoW7AAsfxzHLTLztGA0UJEd3OXpo"
+      ],
+      "skos:prefLabel": "Information system services for Product_Software_Development",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "ApplicationFeature:Product_Software_Development",
+      "@type": "dpmm:ApplicationFeature",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Features: Product Software Development ",
+      "dc:title": "Application System Features for Product_Software_Development",
+      "rdfs:description": "",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "rdf:instanceOf": "",
+      "dmmm:partOf": [
+        "Technology:Product_Software_Development"
+      ],
+      "skos:inScheme": [
+        
+      ],
+      "rdfs:seeAlso": [
+        "https://media.licdn.com/dms/image/C4E12AQEksOIwVelhsw/article-inline_image-shrink_1500_2232/0?e=2131920000&v=beta&t=3LdjmoPmUGH7USTy3vGGEwCoJJE9OkIgT0wU8ySszMs"
+      ],
+      "skos:prefLabel": "Activity enabling Application System Features for Product_Software_Development Capability",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "Process:Product_Software_Development",
+      "@type": "dpmm:Process",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Process: Product Software Development",
+      "dc:title": "Process Flows Software_Developer_Swimlane for Product_Software_Development",
+      "rdfs:description": "",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "rdf:instanceOf": "process",
+      "dpmm:hasParts": [
+        "ProcessMap:Product_Software_Development",
+        "ActionChecklist:Product_Software_Development",
+        "LogicModel:Product_Software_Development"
+      ],
+      "skos:inScheme": [
+        "Capability:Product_Software_Development"
+      ],
+      "rdfs:seeAlso": [
+        "https://media.licdn.com/dms/image/C4E12AQHLuNsCw5qweg/article-inline_image-shrink_1000_1488/0?e=2131920000&v=beta&t=se9N_RKcjKNoe6P1dW2DL-kxwCDzunQl8tSgp5xrjKk"
+      ],
+      "skos:prefLabel": "Process Flow Model for Product_Software_Development Capability",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "ProcessMap:Product_Software_Development",
+      "@type": "dpmm:ProcessMap",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Process maps Product_Software_Development",
+      "dc:title": "Process Workflow Map Product_Software_Development",
+      "rdfs:description": "",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "rdf:instanceOf": "",
+      "dmmm:partOf": [
+        "Process:Product_Software_Development"
+      ],
+      "skos:inScheme": [
+        
+      ],
+      "rdfs:seeAlso": [
+        "https://media.licdn.com/dms/image/C4E12AQGqzqjMz8XWqA/article-inline_image-shrink_1500_2232/0?e=2131920000&v=beta&t=-D6Xa0QxRjktPIWChneclB5Mu1zWtVxYGkvJgfX6pJI"
+      ],
+      "skos:prefLabel": "Process Workflow Map Product_Software_Developmen",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "ActionChecklist:Product_Software_Development",
+      "@type": "dpmm:ActionChecklist",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Checklisst: Product_Software_Development",
+      "dc:title": "Action Plan Checklists for Product_Software_Development",
+      "rdfs:description": "",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "rdf:instanceOf": "",
+      "dmmm:partOf": [
+        "Process:Product_Software_Development"
+      ],
+      "skos:inScheme": [
+        
+      ],
+      "rdfs:seeAlso": [
+        "https://media.licdn.com/dms/image/C4E12AQHL9I-RTJDfXQ/article-inline_image-shrink_1000_1488/0?e=2131920000&v=beta&t=ixMlZ-Qbtrj5jdiJ3xzIV39S0kORCtVCv4QZyIdwhJ8"
+      ],
+      "skos:prefLabel": "Action Plan Checklists for Product_Software_Developmentt",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "LogicModel:Product_Software_Development",
+      "@type": "dpmm:LogicModel",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Logic Models: Product_Software_Development",
+      "dc:title": "Logic model indicators for Product Software Development",
+      "rdfs:description": "Logic Model Indicators ",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "rdf:instanceOf": "",
+      "dmmm:partOf": [
+        "Process:Product_Software_Development"
+      ],
+      "skos:inScheme": [
+        
+      ],
+      "rdfs:seeAlso": [
+        "https://media.licdn.com/dms/image/C4E12AQE4keXw_APnjw/article-inline_image-shrink_1000_1488/0?e=2131920000&v=beta&t=I5TE7od82XTxCtoza5DAv4KA8ib4sYmAmzrQy7PlWTo"
+      ],
+      "skos:prefLabel": "Logic model indicators for Product Software Developments",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "People:Product_Software_Development",
+      "@type": "dpmm:People",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "People: Product Software Developmen ",
+      "dc:title": "People Competency Model for Product_Software_Development",
+      "rdfs:description": "",
+      "dc:abstract": "the ability to do something successfully or efficiently.",
+      "rdfs:comment": "",
+      "rdf:instanceOf": "people",
+      "dpmm:hasParts": [
+        "JobPosition:Product_Software_Development",
+        "SkillMatrix:Product_Software_Development",
+        "BehaviorMaturity:Product_Software_Development"
+      ],
+      "skos:inScheme": [
+        "Capability:Product_Software_Development"
+      ],
+      "rdfs:seeAlso": [
+        "https://media.licdn.com/dms/image/C4E12AQHp_SCVFFQb3g/article-inline_image-shrink_1500_2232/0?e=2131920000&v=beta&t=PtxRUoZEcn-ffoJXw-NiMM7BLl-GS1I067UUZnCXcH4"
+      ],
+      "skos:prefLabel": "People Competency Model for Product_Software_Development",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "JobPosition:Product_Software_Development",
+      "@type": "dpmm:JobPosition",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Positions: Product Software Development",
+      "dc:title": "Role Responsibility Position Description",
+      "rdfs:description": "",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "rdf:instanceOf": "",
+      "dmmm:partOf": [
+        "People:Product_Software_Development"
+      ],
+      "skos:inScheme": [
+        
+      ],
+      "rdfs:seeAlso": [
+        "https://media.licdn.com/dms/image/C4E12AQHp_SCVFFQb3g/article-inline_image-shrink_1500_2232/0?e=2131920000&v=beta&t=PtxRUoZEcn-ffoJXw-NiMM7BLl-GS1I067UUZnCXcH4"
+      ],
+      "skos:prefLabel": "Job Position description Role Responsibility for Product Software Development ",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "SkillMatrix:Product_Software_Development",
+      "@type": "dpmm:SkillMatrix",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Skill: Product_Software_Development",
+      "dc:title": "Skill Behavior Maturity Matrix",
+      "rdfs:description": "",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "rdf:instanceOf": "",
+      "dmmm:partOf": [
+        "People:Product_Software_Development"
+      ],
+      "skos:inScheme": [
+        
+      ],
+      "rdfs:seeAlso": [
+        "https://media.licdn.com/dms/image/C4E12AQELm1Q77sQZqA/article-inline_image-shrink_1000_1488/0?e=2131920000&v=beta&t=gDtyc0zBLxOhbpzHx_zVFbw3yI8um57Jx-M2DYetxHE"
+      ],
+      "skos:prefLabel": "Skill Maturity Model Skill behavior matrix for Product Software Development",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "BehaviorMaturity:Product_Software_Development",
+      "@type": "dpmm:BehaviorMaturity",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Behaviors: Product_Software_Development",
+      "dc:abstract": "",
+      "dc:title": "Product Software Development Behavior Maturity Model",
+      "rdfs:description": "",
+      "rdfs:comment": "",
+      "rdf:instanceOf": "",
+      "dmmm:partOf": [
+        "People:Product_Software_Development"
+      ],
+      "skos:inScheme": [
+        
+      ],
+      "rdfs:seeAlso": [
+        
+      ],
+      "skos:prefLabel": "Competency Behavior Matrix Career path lattice for Product_Software_Development",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    },
+    {
+      "@id": "CareerLattice:Product_Software_Development",
+      "@type": "dpmm:CareerLattice",
+      "rdf:type": "skos:Concept",
+      "dbo:type": "",
+      "rdfs:label": "Lattices:Product_Software_Development",
+      "dc:title": "Career path lattice",
+      "rdfs:description": "",
+      "dc:abstract": "",
+      "rdfs:comment": "",
+      "rdf:instanceOf": "",
+      "dmmm:partOf": [
+        "People:Product_Software_Development"
+      ],
+      "skos:inScheme": [
+        
+      ],
+      "rdfs:seeAlso": [
+        
+      ],
+      "skos:prefLabel": "Career path lattice",
+      "@prov": {
+        "Entity": "prov:",
+        "wasAttributedTo": "",
+        "generatedAtTime": ""
+      }
+    }
+  ]
+}
